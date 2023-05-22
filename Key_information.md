@@ -124,14 +124,8 @@ It is important to note that these techniques require a lot of attention to deta
 
    * **App Level:** Focusing on the app level involves analyzing individual apps separately. Outliers are detected based on app-specific metrics or statistics. This approach enables you to identify outliers that are specific to certain apps and may not be apparent when analyzing the market as a whole. It helps in understanding app-level anomalies, performance variations, or outliers that are unique to particular apps.
 
-The choice between market level and app level outlier detection depends on the specific use case. If the objective is to identify systemic issues or anomalies that impact the entire market, focusing on the market level may be more appropriate. On the other hand, if the goal is to identify app-specific performance issues, identify potential outliers within individual apps, or assess the relative performance of different apps, the app level analysis would be more relevant.
+2. **Quantifying Time Series Trend:**
 
-Quantifying Time Series Trend:
+   * **Market Level:** Analyzing the time series trend at the market level involves aggregating the data across all apps in the market and studying the collective behavior. This provides an overview of the market-wide trend and helps understand the general direction and stability of the market.
 
-Market Level: Analyzing the time series trend at the market level involves aggregating the data across all apps in the market and studying the collective behavior. This provides an overview of the market-wide trend and helps understand the general direction and stability of the market.
-
-App Level: Analyzing the time series trend at the app level involves examining each app's individual time series separately. This enables a detailed understanding of how each app's trend evolves over time and whether it exhibits stability or instability. It helps identify specific app-level trends and how they contribute to the overall market dynamics.
-
-The granularity level chosen for quantifying a time series trend depends on the level of detail required to achieve the desired insights. Market-level analysis provides a broader perspective and captures the overall trend, while app-level analysis allows for a more nuanced understanding of individual app trends and their impact on the market.
-
-In summary, the choice of granularity level in outlier detection or trend analysis, whether focusing on the market level or app level, depends on the specific objectives, the nature of the data, and the insights sought. Both levels have their merits and provide different perspectives, enabling you to gain a comprehensive understanding of the dynamics and anomalies in the market or individual apps.
+   * **App Level:** Analyzing the time series trend at the app level involves examining each app's individual time series separately. This enables a detailed understanding of how each app's trend evolves over time and whether it exhibits stability or instability. It helps identify specific app-level trends and how they contribute to the overall market dynamics.
