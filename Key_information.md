@@ -1,4 +1,4 @@
-# Outlier detection methods and implementation.
+# A. Outlier detection methods and implementation.
 
 ### Q1: How do we define Outlier Detection Method and why do we use it?
 
@@ -53,7 +53,7 @@ We need to keep in mind that the choice of an outlier detection method depends o
 9. [ ] Analyze and interpret the outlier detection results.
 
 
-# Time Series Trend and Stable vs Unstable Trends.
+# B. Time Series Trend and Stable vs Unstable Trends.
 
 ### Q4: What is a Time Series and how do we define a Time Series Trend? 
 
@@ -61,7 +61,7 @@ We need to keep in mind that the choice of an outlier detection method depends o
 
 → A time series trend refers to the long-term pattern or direction of a time series data over a specific period. It captures the underlying tendency or systematic movement of the data points over time, indicating whether the values are increasing, decreasing, or remaining relatively stable.
 
-### How do we quantify certain time series and how to we define trends?
+### Q5: How do we quantify certain time series and how to we define trends?
 
 → Quantifying a time series trend involves applying various statistical and mathematical techniques to measure the overall direction, magnitude, and stability of the trend. Below are some common methods used to quantify time series trends:
 
@@ -80,3 +80,58 @@ We need to keep in mind that the choice of an outlier detection method depends o
 * **Statistical Tests:** Various statistical tests can be applied to evaluate the significance and stationary of the trend. These tests include the Mann-Kendall test, the Sen's slope estimator, or the Augmented Dickey-Fuller (ADF) test. They help assess the statistical significance of the trend and determine its stability.
 
 It is important to note that these techniques require a lot of attention to detail and regular consultation is beneficial to obtain successful projects and subject literacy.
+
+### Q6: How do we define whether a time series trend is 'stable' vs 'unstable' ? 
+
+→ Determining whether a time series trend is "stable" or "unstable" involves assessing the consistency and reliability of the observed pattern over time. While there is no strict mathematical definition, stability is generally understood in terms of the predictability and regularity of the trend. Here are a few considerations to determine the stability of a time series trend:
+
+* **Magnitude and Significance of Fluctuations:** Evaluate the magnitude of fluctuations or deviations from the trend. If the fluctuations are small and within an acceptable range, the trend can be considered stable. Conversely, if the fluctuations are large and significant, it indicates an unstable trend.
+
+* **Statistical Measures:** Apply statistical measures to quantify the stability of the trend. Some common measures include variance, standard deviation, or mean absolute deviation. Lower values indicate a more stable trend, while higher values suggest instability.
+
+* **Persistence and Predictability:** Examine the persistence and predictability of the trend over time. A stable trend is expected to continue in a similar manner without abrupt changes or irregular patterns. If the trend follows a consistent path and can be accurately forecasted, it indicates stability.
+
+* **Autocorrelation:** Analyze the autocorrelation of the time series. A stable trend typically exhibits a high autocorrelation, indicating a strong relationship between past and future values. Low or insignificant autocorrelation may indicate an unstable trend.
+
+* **Structural Breaks:** Look for structural breaks or regime changes in the time series. A sudden shift in the trend's behavior or significant changes in the underlying factors can indicate instability.
+
+* **Time Stability:** Assess the stability of the trend over different time periods. If the trend remains consistent and shows similar characteristics across different time intervals, it suggests stability. In contrast, if the trend varies significantly over time, it indicates instability.
+
+* **Statistical Tests:** Apply statistical tests designed to assess the stability of a time series trend, such as the Chow test, the Quandt-Andrews test, or the Bai-Perron test. These tests can help identify structural breaks or shifts in the trend.
+
+### Q7: How do we use Python or Pyspark to quantify Q4, Q5, Q6?
+
+→ To quantify the stability of a time series trend using Python or PySpark, you can employ statistical measures or techniques that assess the regularity and predictability of the trend. Here are a few approaches:
+
+1. [ ] **Variance or Standard Deviation:** Calculate the variance or standard deviation of the time series values over a specific period. A lower value indicates less variability and suggests a more stable trend, while a higher value indicates greater variability and suggests an unstable trend. You can use Python libraries such as NumPy or PySpark's DataFrame API to compute these statistical measures.
+
+2. [ ] **Autocorrelation:** Autocorrelation measures the correlation between the time series values at different lags. A high autocorrelation indicates a stable trend, as the values at different time points are closely related. Conversely, a low autocorrelation or lack of significant correlations at different lags suggests an unstable trend. The 'autocorr' function in Python's pandas library or the 'autocorrelation' function in PySpark's DataFrame API can be used to compute autocorrelation.
+
+3. [ ] **Forecasting Error:** Employ time series forecasting models, such as ARIMA or exponential smoothing, to predict future values based on the observed trend. Calculate the forecasting errors, such as mean squared error (MSE) or mean absolute error (MAE), which quantify the difference between the predicted and actual values. A lower forecasting error suggests a more stable trend with better predictability.
+
+4. [ ] **Statistical Tests:** Apply statistical tests specifically designed to assess the stability of a time series trend. For example, the Augmented Dickey-Fuller (ADF) test is commonly used to test for stationarity, which is an indicator of trend stability. Python's statsmodels library or PySpark's DataFrame API provide functions to perform the ADF test.
+
+
+# C. Granularity Level for topics A & B
+
+### Q8: When dealing with 500 apps in a market, should the focus be on the market level or app level for outlier detection and trend analysis? This choice has implications for granularity and can impact outlier detection. How does the approach differ between the market as a whole and individual apps?
+
+→ When considering the granularity level for outlier detection or quantifying a time series trend, the choice between focusing on the market level or app level depends on the specific objectives, context, and available data. Let's examine how the granularity level can differ and its implications in both scenarios:
+
+1. **Outlier Detection:**
+
+   * **Market Level:** If you focus on the market level, you would analyze the overall behavior and performance of the entire market. Outliers would be identified based on aggregated market metrics or statistics. This approach provides a high-level view and helps uncover broad market anomalies or exceptional market-wide trends. It is suitable for identifying market-level outliers that affect the overall performance.
+
+   * **App Level:** Focusing on the app level involves analyzing individual apps separately. Outliers are detected based on app-specific metrics or statistics. This approach enables you to identify outliers that are specific to certain apps and may not be apparent when analyzing the market as a whole. It helps in understanding app-level anomalies, performance variations, or outliers that are unique to particular apps.
+
+The choice between market level and app level outlier detection depends on the specific use case. If the objective is to identify systemic issues or anomalies that impact the entire market, focusing on the market level may be more appropriate. On the other hand, if the goal is to identify app-specific performance issues, identify potential outliers within individual apps, or assess the relative performance of different apps, the app level analysis would be more relevant.
+
+Quantifying Time Series Trend:
+
+Market Level: Analyzing the time series trend at the market level involves aggregating the data across all apps in the market and studying the collective behavior. This provides an overview of the market-wide trend and helps understand the general direction and stability of the market.
+
+App Level: Analyzing the time series trend at the app level involves examining each app's individual time series separately. This enables a detailed understanding of how each app's trend evolves over time and whether it exhibits stability or instability. It helps identify specific app-level trends and how they contribute to the overall market dynamics.
+
+The granularity level chosen for quantifying a time series trend depends on the level of detail required to achieve the desired insights. Market-level analysis provides a broader perspective and captures the overall trend, while app-level analysis allows for a more nuanced understanding of individual app trends and their impact on the market.
+
+In summary, the choice of granularity level in outlier detection or trend analysis, whether focusing on the market level or app level, depends on the specific objectives, the nature of the data, and the insights sought. Both levels have their merits and provide different perspectives, enabling you to gain a comprehensive understanding of the dynamics and anomalies in the market or individual apps.
