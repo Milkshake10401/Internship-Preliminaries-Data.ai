@@ -129,3 +129,17 @@ It is important to note that these techniques require a lot of attention to deta
    * **Market Level:** Analyzing the time series trend at the market level involves aggregating the data across all apps in the market and studying the collective behavior. This provides an overview of the market-wide trend and helps understand the general direction and stability of the market.
 
    * **App Level:** Analyzing the time series trend at the app level involves examining each app's individual time series separately. This enables a detailed understanding of how each app's trend evolves over time and whether it exhibits stability or instability. It helps identify specific app-level trends and how they contribute to the overall market dynamics.
+
+
+# D. Work Citations:
+
+1. https://statisticsbyjim.com/basics/outliers/
+2. https://machinelearningmastery.com/model-based-outlier-detection-and-removal-in-python/
+3. https://www.geeksforgeeks.org/detect-and-remove-the-outliers-using-python/
+4. https://deepnote.com/@rajshekar-2021/Outlier-Detection-Pyspark-069e69af-2c1d-4d4d-884a-92aad276d06f
+5. https://www.countyhealthrankings.org/explore-health-rankings/interpreting-trend-graphs
+6. https://www.geeksforgeeks.org/what-is-a-trend-in-time-series/
+7. https://www.tableau.com/learn/articles/time-series-analysis
+8. https://www.memind.eu/granularity-data/#:~:text=Granularity%20indicates%20the%20level%20of,it%20is%20considered%20to%20be.
+9. https://c3.ai/glossary/features/data-granularity/
+10. https://www.sciencedirect.com/topics/computer-science/granularity-level
